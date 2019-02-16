@@ -7,6 +7,9 @@ ruby '2.6.0'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
 
+gem 'materialize-sass', '~> 1.0'
+gem 'material_icons'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
