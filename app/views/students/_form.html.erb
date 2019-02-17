@@ -20,7 +20,19 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <%= f.submit(@student.new_record? ? "Sign up" : "Submit Changes", class: "btn cyan waves-effect waves-light") %>
+                  <%= f.password_field :password, placeholder: "Choose a password" %>
+                  <%= f.label :password %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+                  <%= f.label :password_confirmation %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <%= f.button(@student.new_record? ? "Sign up" : "Submit Changes", class: "btn cyan waves-effect waves-light") %>
                 </div>
               </div>
             <% end %>
