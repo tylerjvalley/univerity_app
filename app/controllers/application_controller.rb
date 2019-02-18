@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :require_user 
 
   helper_method :current_user, :logged_in?
 
@@ -8,5 +9,12 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !!current_user #makes it into a boolean value
+  end
+
+  def require_user
+    if !logged_in?
+      flash[:notice] = "You must be logged in to do this"
+      redirect_to login_path
+    end
   end
 end
